@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SplitWise - Group Expense Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+<h1>SplitWise</h1>
+<span>GROUP EXPENSE TOOL</span>
+</header>
+
+<div class="dashboard">
+
+<!-- STATS -->
+<div class="stats">
+
+<div class="stat">
+<h4>Members</h4>
+<p id="memberCount">0</p>
+</div>
+
+<div class="stat">
+<h4>Total Expense</h4>
+<p id="totalExpense">₹0.00</p>
+</div>
+
+<div class="stat">
+<h4>Equal Share</h4>
+<p id="equalShare">₹0.00</p>
+</div>
+
+<div class="stat">
+<h4>Settlements</h4>
+<p id="settlementCount">0</p>
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<!-- MEMBERS -->
+<div class="card">
+
+<h2>Group Members</h2>
+
+<div class="add-member">
+<input id="memberInput" placeholder="Enter member name">
+<button onclick="addMember()">Add</button>
+</div>
+
+<ul id="memberList"></ul>
+
+</div>
+
+
+<!-- TRANSACTION HISTORY -->
+<div class="card">
+
+<h2>Transaction History</h2>
+
+<table id="history">
+<tr>
+<th>Member</th>
+<th>Amount</th>
+<th>Description</th>
+</tr>
+</table>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<!-- ADD EXPENSE -->
+<div class="card">
+
+<h2>Add Expense</h2>
+
+<select id="payer"></select>
+
+<input type="number" id="amount" placeholder="Amount (₹)">
+
+<input id="desc" placeholder="Description">
+
+<button onclick="addExpense()">Add Expense</button>
+
+</div>
+
+
+<!-- BALANCES -->
+<div class="card">
+
+<h2>Member Balances</h2>
+
+<div id="balances"></div>
+
+</div>
+
+
+<!-- SETTLEMENTS -->
+<div class="card">
+
+<h2>Settlements</h2>
+
+<div id="settlements"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
